@@ -1,36 +1,21 @@
 <template>
   <div id="app">
-    <div class="tabbar">
-		<div>书架</div>
-	</div>
+	<tab-bar></tab-bar>
 	<router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+const TabBar=()=>import('./components/TabBar.vue');
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    TabBar
   }
 }
 </script>
-
+	
 <style>
-
-*{
-  margin: 0;
-  padding: 0;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+	@import url('./assets/css/base.css');
 </style>
